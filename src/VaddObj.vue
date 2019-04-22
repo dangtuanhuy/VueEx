@@ -7,8 +7,8 @@
           <li v-for="(Fruit, index) in Fruits" :key="index">
             <div
               v-for="(value, key, index) in Fruit "
-              :key="index" v-bind:class="Device(index)"
-            >{{ key }}: {{ value }} ({{ index }}){{Device(index)}}</div>
+              :key="index" v-bind:class="Device1(index)"
+            >{{ key }}: {{ value }} ({{ index }}){{Device1(index)}}</div>
           </li>
         </ul>
         <hr>
@@ -30,7 +30,7 @@ export default {
     };
   },
   methods: {
-    Device(index) {
+    Device1(index) {
       return index % 2 !== 0 ? "So Chan" : "So Le";
     }
   }
@@ -38,11 +38,11 @@ export default {
 </script>
 
 <style>
-.color1 {
+.color3 {
   background-color: aquamarine;
   border-radius: 10px;
 }
-.color2 {
+.color4 {
   background-color: purple;
   border-radius: 10px;
 }
